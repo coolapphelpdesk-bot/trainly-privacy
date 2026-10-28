@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Trainly</title>
+<meta name="description" content="Privacy policy for the Trainly Android application by Cool App Helpdesk.">
+<style>
+  :root {
+    --bg: #f6f4ff; --surface: #ffffff; --text: #1e1b3a; --muted: #5b5878;
+    --primary: #4a3fd1; --primary-soft: #ece8ff; --border: #e4e0f5;
+    --positive: #065f46; --positive-bg: #ddf5ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0d1c; --surface: #181530; --text: #ecebf7; --muted: #a29fc0;
+      --primary: #b3abff; --primary-soft: #2a2552; --border: #2c2850;
+      --positive: #8fd9b8; --positive-bg: #163a2e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  header { border-radius: 16px; padding: 32px 28px; margin-bottom: 24px;
+    background: linear-gradient(135deg, #5b4fe9 0%, #3a2fb0 55%, #181530 100%); color: #fff; }
+  header h1 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; opacity: 0.92; font-size: 15px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px; margin: 14px 0; }
+  h2 { font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.005em; }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; } li { margin-bottom: 6px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); background: var(--primary-soft); }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--primary-soft); padding: 1px 6px; border-radius: 4px;
+    font-size: 13px; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+  a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; }
+  .badge { display: inline-block; background: var(--positive-bg); color: var(--positive);
+    font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 24px 16px 64px; }
+    header { padding: 24px 20px; } header h1 { font-size: 24px; }
+    .card { padding: 18px 20px; } h2 { font-size: 17px; }
+    table { font-size: 13px; } th, td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header>
+  <h1>Privacy Policy</h1>
+  <p>Trainly &middot; last updated <time datetime="2026-10-28">October 28, 2026</time></p>
+</header>
+
+<section class="card">
+  <h2>1. Summary</h2>
+  <p>Trainly (&ldquo;the app&rdquo;) is a public transport app for Android published by <strong>Cool App Helpdesk</strong>. It shows departures near you, live vehicle positions, trip plans and service alerts. This policy covers every country edition of Trainly (for example Trainly France, <code>coolapp.trainly.france</code>).</p>
+  <ul>
+    <li>There is no account or sign-in, and <strong>we (the developer) never receive any data about you, where you are or where you travel</strong>. We have no server.</li>
+    <li>To show departures and plan trips, the app asks a public transit data service (<strong>Transitous</strong>) for them. That request contains the place you are looking at: your location if you chose &ldquo;Use my location&rdquo;, otherwise the station you picked. See section 5.</li>
+    <li>Location is optional. You can pick any station instead, and the app works the same.</li>
+    <li>Your saved places, saved trips and settings stay on your device.</li>
+    <li>The app contains <strong>no ads, no analytics, no crash-reporting and no tracking SDK</strong>.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>2. Data we collect</h2>
+  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer.</p>
+  <p>The only data that leaves your device is what the app needs to fetch transit information &mdash; a position or a search text &mdash; sent to the transit data service and map tile service described in section 5, which return the departures, routes and maps you see. Those services are not operated by the developer, and no name, account, advertising ID or device identifier is sent to them.</p>
+  <p>Crash and stability statistics that Android shares with Google Play under your device&rsquo;s own settings (&ldquo;Android vitals&rdquo;) are aggregated and anonymous; they contain nothing about where you are or where you travel.</p>
+</section>
+
+<section class="card">
+  <h2>3. Data stored on your device</h2>
+  <p>Everything the app keeps is stored on your device and is deleted when you uninstall the app or clear its data.</p>
+  <table>
+    <thead><tr><th>Item</th><th>Where</th><th>Sent off device?</th></tr></thead>
+    <tbody>
+      <tr><td>The place Home shows departures for: &ldquo;my location&rdquo;, or the name and coordinates of the station you picked</td><td>App private storage</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>Saved places: Home, Work and the stations you add (name, area, coordinates)</td><td>App private storage (local database)</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>Saved trips: line, destination and arrival time. They expire once the trip has ended.</td><td>App private storage (local database)</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>A &ldquo;Wake me before stop&rdquo; alert you set: stop, line and time</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Which service alerts you have already read, and whether you chose a language on first launch</td><td>App private storage</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>Your device&rsquo;s current location</td><td>Not stored. Read when Home needs it and used for that request only.</td><td>Sent to the transit data service as part of the request (section 5)</td></tr>
+    </tbody>
+  </table>
+  <p>Android cloud backup, when enabled on your device, can include the settings and saved items above, so they come back on a new phone. It goes to your own Google account and the developer cannot read it.</p>
+</section>
+
+<section class="card">
+  <h2>4. Permissions used</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
+    <tbody>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Fetch departures, trips, alerts and map tiles, and know whether you are online.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code></td><td>Show departures from the stops around you and plan trips from where you are. Used only while you use the app &mdash; never in the background.</td><td>When you tap &ldquo;Use my location&rdquo;. Optional: you can pick a station instead.</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the &ldquo;Wake me before stop&rdquo; alert.</td><td>When you set that alert (Android 13+). Optional.</td></tr>
+      <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Fire the &ldquo;Wake me before stop&rdquo; alert on time. Without it the alert still comes, but Android may delay it.</td><td>Only if you set that alert and choose to allow &ldquo;Alarms &amp; reminders&rdquo; in system settings</td></tr>
+    </tbody>
+  </table>
+  <p>The app requests no access to your contacts, camera, microphone, photos, files or background location. Location is read through Google Play services&rsquo; location provider, under your device&rsquo;s location settings.</p>
+</section>
+
+<section class="card">
+  <h2>5. Network activity and third parties</h2>
+  <p>The app talks to these services, over HTTPS, only to get the information you asked for:</p>
+  <table>
+    <thead><tr><th>Service</th><th>What it receives</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://transitous.org/" target="_blank" rel="noopener">Transitous</a> (<code>api.transitous.org</code>), a community-run open transit service</td><td>The coordinates or station Home is showing; the start and end of a trip you plan; the text you type in a search box; the trip you open; your language. Like any website, it also sees your IP address. Every request names the app and its version, with the developer&rsquo;s contact address, as the service requires.</td><td>Departures, live vehicle positions, trip plans, stop search and service alerts</td></tr>
+      <tr><td><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a> (<code>tiles.openfreemap.org</code>)</td><td>Which map area you are viewing, and your IP address</td><td>The map images on the Live map</td></tr>
+    </tbody>
+  </table>
+  <p>These services are run by third parties that the developer has no contract with; they handle requests under their own policies. They do not receive any name, account, advertising ID or device identifier from the app.</p>
+  <p>When you use &ldquo;Share my ETA&rdquo; or &ldquo;Report issue&rdquo;, the app opens the sharing or email app you choose with the text filled in; nothing is sent until you send it yourself. &ldquo;See all data sources&rdquo; opens the Transitous sources page in your browser.</p>
+  <p>The app contains no advertising, analytics, crash-reporting, attribution, social or cloud-storage SDK.</p>
+</section>
+
+<section class="card">
+  <h2>6. Children&rsquo;s privacy</h2>
+  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone.</p>
+</section>
+
+<section class="card">
+  <h2>7. Data retention and deletion</h2>
+  <p>The developer stores no data off your device. Remove a saved place or trip with its &times; button, and change Home&rsquo;s place in Settings. To remove everything, clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Trainly &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. You can turn off the app&rsquo;s location access at any time in <em>Android Settings &rarr; Apps &rarr; Trainly &rarr; Permissions</em>. The transit and map services in section 5 keep their own server logs under their own policies; the developer cannot reach or delete them.</p>
+</section>
+
+<section class="card">
+  <h2>8. Security</h2>
+  <p>App data is held in the app&rsquo;s private storage, protected by Android&rsquo;s built-in application sandboxing. All network requests use HTTPS. The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
+</section>
+
+<section class="card">
+  <h2>9. Changes to this policy</h2>
+  <p>If any material aspect of how the app handles data ever changes, this page will be updated and the &ldquo;last updated&rdquo; date above will be bumped. Continued use after a change constitutes acceptance.</p>
+</section>
+
+<section class="card">
+  <h2>10. Contact</h2>
+  <p>Questions, requests about your data, or complaints (including as grievance contact under India&rsquo;s Digital Personal Data Protection Act)? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+</section>
+
+<footer>&copy; 2026 Cool App Helpdesk &middot; Trainly</footer>
+
+</main>
+</body>
+</html>
