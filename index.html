@@ -67,14 +67,26 @@
     <li>To show departures and plan trips, the app asks a public transit data service (<strong>Transitous</strong>) for them. That request contains the place you are looking at: your location if you chose &ldquo;Use my location&rdquo;, otherwise the station you picked. See section 5.</li>
     <li>Location is optional. You can pick any station instead, and the app works the same.</li>
     <li>Your saved places, saved trips and settings stay on your device.</li>
-    <li>The app contains <strong>no ads, no analytics, no crash-reporting and no tracking SDK</strong>.</li>
+    <li>The app includes <strong>Google AdMob</strong> to show one banner ad on its Home screen. Ads are switched off until 1 September 2027; until then the ads SDK is not started and receives nothing. See section 2.</li>
+    <li>The app contains no analytics, crash-reporting or attribution SDK.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>2. Data we collect</h2>
-  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer.</p>
-  <p>The only data that leaves your device is what the app needs to fetch transit information &mdash; a position or a search text &mdash; sent to the transit data service and map tile service described in section 5, which return the departures, routes and maps you see. Those services are not operated by the developer, and no name, account, advertising ID or device identifier is sent to them.</p>
+  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer. The only third-party SDK that can collect data is Google AdMob, described below.</p>
+  <p><strong>Advertising (Google AdMob)</strong></p>
+  <p>The app shows one banner ad on its Home screen, below the departures, served by the <strong>Google Mobile Ads SDK (AdMob)</strong>. Ads are switched off until <strong>1 September 2027</strong>: before that date the SDK is never started, requests no ads and collects nothing. From that date, AdMob may collect the following to show and measure ads:</p>
+  <table>
+    <thead><tr><th>Data</th><th>Purpose</th><th>Collected by</th></tr></thead>
+    <tbody>
+      <tr><td>Advertising ID</td><td>Show ads, including personalised ads where allowed</td><td>Google AdMob</td></tr>
+      <tr><td>Device and app information, ad interactions</td><td>Measure ads, prevent fraud</td><td>Google AdMob</td></tr>
+      <tr><td>IP address</td><td>Approximate location for ad delivery</td><td>Google AdMob</td></tr>
+    </tbody>
+  </table>
+  <p>This data goes to Google, not to the developer, and is handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>). The ads SDK never receives your device&rsquo;s location from the app, your saved places or your trips. You can reset or delete your advertising ID, or opt out of personalised ads, in <em>Android Settings &rarr; Privacy &rarr; Ads</em>.</p>
+  <p>Apart from ads, the only data that leaves your device is what the app needs to fetch transit information &mdash; a position or a search text &mdash; sent to the transit data service and map tile service described in section 5, which return the departures, routes and maps you see. Those services are not operated by the developer, and no name, account, advertising ID or device identifier is sent to them.</p>
   <p>Crash and stability statistics that Android shares with Google Play under your device&rsquo;s own settings (&ldquo;Android vitals&rdquo;) are aggregated and anonymous; they contain nothing about where you are or where you travel.</p>
 </section>
 
@@ -100,12 +112,14 @@
   <table>
     <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
     <tbody>
-      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Fetch departures, trips, alerts and map tiles, and know whether you are online.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Fetch departures, trips, alerts and map tiles, know whether you are online, and load ads (from 1 September 2027).</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>AD_ID</code></td><td>Added by the Google Mobile Ads SDK so AdMob can read the advertising ID once ads are on (section 2).</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code></td><td>Show departures from the stops around you and plan trips from where you are. Used only while you use the app &mdash; never in the background.</td><td>When you tap &ldquo;Use my location&rdquo;. Optional: you can pick a station instead.</td></tr>
       <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the &ldquo;Wake me before stop&rdquo; alert.</td><td>When you set that alert (Android 13+). Optional.</td></tr>
       <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Fire the &ldquo;Wake me before stop&rdquo; alert on time. Without it the alert still comes, but Android may delay it.</td><td>Only if you set that alert and choose to allow &ldquo;Alarms &amp; reminders&rdquo; in system settings</td></tr>
     </tbody>
   </table>
+  <p>Libraries the app is built with also declare a few permissions that Android grants automatically and that give no access to your personal data: <code>ACCESS_WIFI_STATE</code> and Android&rsquo;s ad-services permissions (Google Mobile Ads SDK, inactive until 1 September 2027), and <code>WAKE_LOCK</code> / <code>FOREGROUND_SERVICE</code> (Android&rsquo;s background-work library).</p>
   <p>The app requests no access to your contacts, camera, microphone, photos, files or background location. Location is read through Google Play services&rsquo; location provider, under your device&rsquo;s location settings.</p>
 </section>
 
@@ -121,12 +135,12 @@
   </table>
   <p>These services are run by third parties that the developer has no contract with; they handle requests under their own policies. They do not receive any name, account, advertising ID or device identifier from the app.</p>
   <p>When you use &ldquo;Share my ETA&rdquo; or &ldquo;Report issue&rdquo;, the app opens the sharing or email app you choose with the text filled in; nothing is sent until you send it yourself. &ldquo;See all data sources&rdquo; opens the Transitous sources page in your browser.</p>
-  <p>The app contains no advertising, analytics, crash-reporting, attribution, social or cloud-storage SDK.</p>
+  <p>Apart from Google AdMob (section 2), the app contains no analytics, crash-reporting, attribution, social or cloud-storage SDK.</p>
 </section>
 
 <section class="card">
   <h2>6. Children&rsquo;s privacy</h2>
-  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone.</p>
+  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone. Ads are not directed at children.</p>
 </section>
 
 <section class="card">
